@@ -14,7 +14,7 @@ sessionsRouter.use((req, res, next) => {
 })
 
 sessionsRouter.route('/').get((req, res) => {
-    const url = "mongodb+srv://likealonso:haulass21@globomantics.1m4yh.mongodb.net?retryWrites=true&w=majority"
+    const url = process.env.DATABASE_URL
     const dbName = 'globomantics';
 
     (async function mongo(){
@@ -38,7 +38,7 @@ sessionsRouter.route('/').get((req, res) => {
 })
 sessionsRouter.route('/:id').get((req, res) => {
         const id = req.params.id;
-        const url = "mongodb+srv://likealonso:haulass21@globomantics.1m4yh.mongodb.net?retryWrites=true&w=majority"
+        const url = process.env.DATABASE_URL
     const dbName = 'globomantics';
 
     (async function mongo(){
