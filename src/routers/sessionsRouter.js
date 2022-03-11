@@ -15,7 +15,6 @@ sessionsRouter.use((req, res, next) => {
 
 sessionsRouter.route('/').get((req, res) => {
     const url = process.env.DATABASE_URL
-    console.log(url)
     const dbName = 'globomantics';
 
     (async function mongo(){
@@ -34,7 +33,7 @@ sessionsRouter.route('/').get((req, res) => {
         } catch (error){
             debug(error.stack);
         }
-        client.close();
+        //client.close();
     }())
 })
 sessionsRouter.route('/:id').get((req, res) => {
@@ -59,7 +58,7 @@ sessionsRouter.route('/:id').get((req, res) => {
         } catch (error){
             debug(error.stack);
         }
-        client.close();
+        //client.close();
     }())
     
 })
