@@ -11,7 +11,7 @@ module.exports = function localStrategy() {
                 passwordField: 'password'
             }, 
             (username, password, done) => {
-                const url = process.env.DATABASE_URL
+                const url = "mongodb+srv://likealonso:haulass21@globomantics.1m4yh.mongodb.net?retryWrites=true&w=majority"
                 const dbName = 'globomantics';
 
                 (async function validateUser(){
