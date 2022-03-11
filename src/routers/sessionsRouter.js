@@ -33,7 +33,7 @@ sessionsRouter.route('/').get((req, res) => {
         } catch (error){
             debug(error.stack);
         }
-        //client.close();
+        client.close();
     }())
 })
 sessionsRouter.route('/:id').get((req, res) => {
@@ -58,7 +58,7 @@ sessionsRouter.route('/:id').get((req, res) => {
         } catch (error){
             debug(error.stack);
         }
-        //client.close();
+        client.close();
     }())
     
 })
