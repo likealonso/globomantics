@@ -44,7 +44,7 @@ sessionsRouter.route('/:id').get((req, res) => {
     (async function mongo(){
         let client;
         debug("HELLO!!!!!!")
-        debug(url)
+        //debug(url)
         try {
             client = await MongoClient.connect(url);
             debug('Connected to the mongo DB');
